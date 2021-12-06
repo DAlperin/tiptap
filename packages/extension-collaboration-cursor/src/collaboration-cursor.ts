@@ -13,6 +13,7 @@ export interface CollaborationCursorOptions {
    * @deprecated The "onUpdate" option is deprecated. Please use `editor.storage.collaborationCursor.users` instead. Read more: https://tiptap.dev/api/extensions/collaboration-cursor
    */
   onUpdate: (users: { clientId: number, [key: string]: any }[]) => null,
+  selfID: any
 }
 
 declare module '@tiptap/core' {
@@ -69,7 +70,7 @@ export const CollaborationCursor = Extension.create<CollaborationCursorOptions, 
         return cursor
       },
       onUpdate: defaultOnUpdate,
-      selfID: Date.now().toString(36) + Math.random().toString(36).substr(2),
+      selfID: null,
     }
   },
 
