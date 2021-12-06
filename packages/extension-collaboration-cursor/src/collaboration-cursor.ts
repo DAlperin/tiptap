@@ -106,6 +106,7 @@ export const CollaborationCursor = Extension.create<CollaborationCursorOptions, 
   addProseMirrorPlugins() {
     return [
       yCursorPlugin((() => {
+        console.log(this.options.user)
         this.options.provider.awareness.setLocalStateField('user', this.options.user)
 
         this.storage.users = awarenessStatesToArray(this.options.provider.awareness.states)
