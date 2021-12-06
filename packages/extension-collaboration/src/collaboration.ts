@@ -1,12 +1,13 @@
 import { Extension } from '@tiptap/core'
 import { UndoManager } from 'yjs'
+// @ts-ignore
 import {
   redo,
   undo,
   ySyncPlugin,
   yUndoPlugin,
   yUndoPluginKey,
-} from 'y-prosemirror'
+} from '@dalperin/y-prosemirror'
 
 declare module '@tiptap/core' {
   interface Commands<ReturnType> {

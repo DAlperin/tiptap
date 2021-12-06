@@ -1,5 +1,5 @@
 import { Extension } from '@tiptap/core'
-import { yCursorPlugin } from 'y-prosemirror'
+import { yCursorPlugin } from '@dalperin/y-prosemirror'
 
 type CollaborationCursorStorage = {
   users: { clientId: number, [key: string]: any }[],
@@ -69,6 +69,7 @@ export const CollaborationCursor = Extension.create<CollaborationCursorOptions, 
         return cursor
       },
       onUpdate: defaultOnUpdate,
+      selfID: Date.now().toString(36) + Math.random().toString(36).substr(2),
     }
   },
 

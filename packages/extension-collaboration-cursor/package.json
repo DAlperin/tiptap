@@ -1,5 +1,5 @@
 {
-  "name": "@tiptap/extension-collaboration-cursor",
+  "name": "@dalperin/extension-collaboration-cursor",
   "description": "collaboration cursor extension for tiptap",
   "version": "2.0.0-beta.33",
   "homepage": "https://tiptap.dev",
@@ -24,7 +24,7 @@
     "@tiptap/core": "^2.0.0-beta.1"
   },
   "dependencies": {
-    "y-prosemirror": "^1.0.13"
+    "@dalperin/y-prosemirror": "^1.0.12"
   },
   "repository": {
     "type": "git",
